@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Generic Page - Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo">My portfolio</a>
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="links">
+          <li><a href="index.html">Welcome to my portfolio</a></li>
+          <li class="active"><a href="generic.html">sentiment analysis</a></li>
+          <li><a href="elements.html">web scraping</a></li>
+        </ul>
+        <ul class="icons">
+          <li>
+            <a href="https://www.linkedin.com/in/otto-halminen-864b191a0" class="icon brands fa-linkedin"
+              ><span class="label">Linkedin</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/32kode" class="icon brands fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Post -->
+        <section class="post">
+          <header class="major">
+            <h1>
+              Sentiment analysis<br />
+              for tweets #spotify
+            </h1>
+            <p>
+              This project was created to analyze the sentiment of people on
+              twitter regarding spotify.<br />
+              I wanted to explore what kind of insights could be make using
+              pythons NLTK library <br />
+              and word clouds.<br />
+              Here is my sentiment analysis project of Tweets that include the
+              keyword spotify. <br />*All Tweets were fetced on 17.09.2022, between 22:00-24:00 EEST.
+            </p>
+          </header>
+          <h2>Positive sentiment</h2>
+          <div class="image main">
+            <img src="wc_clean_pos_copy.png" alt="" />
+          </div>
+          <p>The final version of the Tweets that have a positive sentiment</p>
+          <h2>negative sentiment</h2>
+          <div class="image main">
+            <img src="wc_clean_neg_copy.png" alt="" />
+          </div>
+          <p>The final version of the Tweets with a negative sentiment</p>
+		  <h2 style="text-align: center;">How we got there </h2>
+		  <p>First a collection of 2000 Tweets were fetched using the Twitter API and Tweepy library. Then the Tweets were given a sentiment score using NLTK and TextBlob libraries.
+			This is the result of forming a word cloud of Tweets with negative sentiment before proper data cleaning and word processing, which will be done in the later stages.
+		  </p>
+		  <div class="image main">
+			<img src="wc_neg_copy.png" alt=""/>
+			<p>Word cloud of Tweets with a negative sentiment, prior to data cleaning or word processing.</p>
+		  </div>
+		  <h2 style="text-align: center;" >Walkthough of the steps </h2>
+		  <p>Remove punctuation -> list comprehension & Regex<br />
+			Tokenization -> Regex<br />
+			Remove stopwords -> library nltk(stopwords)<br />
+			Stemming the words -> library PorterStemmer<br />
+			Applying final cleaning steps to tidy the text data.<br />
+			Regex and list comprehension was extensively used in the transformation of data.</p>
+			<h2 style="text-align: center;" >Final results </h2>
+			<div class="image main">
+				<img src="wc_clean_pos_copy.png" alt=""/>
+				<p>The final version the Tweets that has positive sentiment.</p>
+				<p>Here we can see large trends of what people are voicing their opinions on, apparently Blackpink was a big topic at the time that the Twitter textual data was fetched.
+					The data checks out, at the time of my data fetching (17.09.2022 23:00 EEST), Blackpink became the first Korean girl group to earn multiple #1 hits on Spotify Global Chart which would explain partly the large interest in discussing the band.
+
+				</p>
+				</div>
+			<div class="image main">
+				<img src="wc_clean_neg_copy.png" alt="">
+				<p>The final version of the Tweets with negative sentiment</p>
+				<p>Now at a look at the negative side of sentiment, apparently people are having negative thought mostly about waiting and the algorithm. It's important to keep in mind that querying 2000 Tweets reuslts in a timeframe of no larger than roughly 3 hours, and that might skew the results.</p>
+			</div>
+			<h2 style="text-align: center;"> Discussion </h2>
+			<p> Ideas for improvements I might do in the near futre:<br />Enlarge the sample size to get a bigger sample, maybe I can spot themes that are reoccuring on a larger scale and in that way get a more meaningful result.
+			<br />Try and implement wordNet in place of PorterStemmer, in other use cases it's resulted in a more accurate match of word origin.
+			<br />Ngrams to see word association.
+			<br />Negation detection.
+			<br /> The main structure of the code was implemented from https://github.com/yalinyener/TwitterSentimentAnalysis with modifications to fit the code to work for my application.
+			</p>
+
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+          <section>
+            <h3>Phone</h3>
+            <p><a href="#">+358 (0) 40 1922 757</a></p>
+          </section>
+          <section>
+            <h3>Email</h3>
+            <p><a href="#">ottohalminen@hotmail.com</a></p>
+          </section>
+          <section>
+            <h3>Social</h3>
+            <ul class="icons alt">
+              <li>
+                <a href="https://www.linkedin.com/in/otto-halminen-864b191a0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8YXDQnJHSqGyQwtTVVYlNA%3D%3D" class="icon brands alt fa-linkedin"
+                  ><span class="label">Linkedin</span></a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/32kode" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+
+      <!-- Copyright -->
+      <div id="copyright">
+        <ul>
+          <li>&copy; Untitled</li>
+          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
