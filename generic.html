@@ -58,7 +58,7 @@
             <p>
               This project was created to analyze the sentiment of people on
               twitter regarding spotify.<br />
-              I wanted to explore what kind of insights could be make using
+              I wanted to explore what kind of insights could be made using
               pythons NLTK library <br />
               and word clouds.<br />
               Here is my sentiment analysis project of Tweets that include the
@@ -76,12 +76,14 @@
           </div>
           <p>The final version of the Tweets with a negative sentiment</p>
 		  <h2 style="text-align: center;">How we got there </h2>
-		  <p>First a collection of 2000 Tweets were fetched using the Twitter API and Tweepy library. Then the Tweets were given a sentiment score using NLTK and TextBlob libraries.
+		  <p>First a collection of 2000 Tweets per word cloud were fetched using the Twitter API and the Tweepy library. Then the Tweets were given a sentiment score using NLTK and TextBlob libraries.
 			This is the result of forming a word cloud of Tweets with negative sentiment before proper data cleaning and word processing, which will be done in the later stages.
 		  </p>
 		  <div class="image main">
 			<img src="wc_neg_copy.png" alt=""/>
 			<p>Word cloud of Tweets with a negative sentiment, prior to data cleaning or word processing.</p>
+			  <p> As we can see the word cloud includes items such as single letters and results from all languages, this will be taken care of in later stages. "spotify" is the top 
+				  word for many searches because it's the keyword, it adds no value so this will be removed from the word cloud aswell.</p>
 		  </div>
 		  <h2 style="text-align: center;" >Walkthough of the steps </h2>
 		  <p>Remove punctuation -> list comprehension & Regex<br />
@@ -89,24 +91,24 @@
 			Remove stopwords -> library nltk(stopwords)<br />
 			Stemming the words -> library PorterStemmer<br />
 			Applying final cleaning steps to tidy the text data.<br />
-			Regex and list comprehension was extensively used in the transformation of data.</p>
+			Regex and list comprehension were extensively used in the transformation of data.</p>
 			<h2 style="text-align: center;" >Final results </h2>
 			<div class="image main">
 				<img src="wc_clean_pos_copy.png" alt=""/>
-				<p>The final version the Tweets that has positive sentiment.</p>
-				<p>Here we can see large trends of what people are voicing their opinions on, apparently Blackpink was a big topic at the time that the Twitter textual data was fetched.
-					The data checks out, at the time of my data fetching (17.09.2022 23:00 EEST), Blackpink became the first Korean girl group to earn multiple #1 hits on Spotify Global Chart which would explain partly the large interest in discussing the band.
+				<p>The final version of the Tweets that have a positive sentiment.</p>
+				<p>Here we can see large trends of what people are voicing their opinions on. Apparently Blackpink was a big topic at the time that the Twitter textual data was fetched.
+					The data checks out, at the time of my data fetching (17.09.2022 23:00 EEST), Blackpink became the first Korean girl group to earn multiple #1 hits on Spotify Global Chart which would atleast partly explain the large interest in discussing the group.
 
 				</p>
 				</div>
 			<div class="image main">
 				<img src="wc_clean_neg_copy.png" alt="">
-				<p>The final version of the Tweets with negative sentiment</p>
-				<p>Now at a look at the negative side of sentiment, apparently people are having negative thought mostly about waiting and the algorithm. It's important to keep in mind that querying 2000 Tweets reuslts in a timeframe of no larger than roughly 3 hours, and that might skew the results.</p>
+				<p>The final version of the Tweets with a negative sentiment</p>
+				<p>Now a look into Tweets with a negative sentiment, apparently people were Tweeting negative things mostly about waiting and the algorithm. It's important to keep in mind that querying 2000 Tweets results in a timeframe of no larger than roughly 3 hours, and that might skew the results to being one sided.</p>
 			</div>
 			<h2 style="text-align: center;"> Discussion </h2>
-			<p> Ideas for improvements I might do in the near futre:<br />Enlarge the sample size to get a bigger sample, maybe I can spot themes that are reoccuring on a larger scale and in that way get a more meaningful result.
-			<br />Try and implement wordNet in place of PorterStemmer, in other use cases it's resulted in a more accurate match of word origin.
+			<p> Ideas for improvements I might do in the near future:<br />Enlarge the sample size to get a bigger sample, maybe it is possible to spot themes that are reoccuring on a larger scale and in that way get a more meaningful significant result.
+			<br />Try and implement wordNet in place of PorterStemmer, in other use cases it has proven to result in more accurate match of word origin.
 			<br />Ngrams to see word association.
 			<br />Negation detection.
 			<br /> The main structure of the code was implemented from https://github.com/yalinyener/TwitterSentimentAnalysis with modifications to fit the code to work for my application.
